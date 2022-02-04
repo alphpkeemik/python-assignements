@@ -2,7 +2,7 @@ import unittest
 import os
 from os import path
 
-from components.Assignment import population, sort_values, sum_map
+from components.Assignment import key_contains, population, sort_values, sum_map
 
 
 class TestAssignment(unittest.TestCase):
@@ -33,6 +33,10 @@ a v y'''
         self.assertEqual(["29\n"], self._get_file_content())
         self.assertEqual(22, sum_map({"test": 22, "arveldu": 7, "uu": 112}))
         self.assertEqual(["29\n", "22\n"], self._get_file_content())
+
+    def test_key_contains(self):
+        self.assertEqual(8.20, key_contains(
+            {"most": 12.4, "least": 4, "something": 6}))
 
 
 if __name__ == '__main__':

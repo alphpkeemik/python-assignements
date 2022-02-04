@@ -31,3 +31,14 @@ def sum_map(map):
     f.write(str(sum) + "\n")
     f.close()
     return sum
+
+def key_contains(map):
+
+    sum = 0
+    count = 0
+    for key, value in map.items():
+        if key.find('st') > -1:
+            sum += value
+            count+=1
+
+    return round(sum/count, 2)
