@@ -13,3 +13,8 @@ def sort_values(*args):
         ' '.join(map(str, intList)),
         ' '.join(strList)
     ])
+
+
+def population(personCount):
+    womenCount = (personCount * personCount)
+    return personCount + womenCount + personCount * womenCount
