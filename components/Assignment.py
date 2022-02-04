@@ -1,10 +1,16 @@
 
+import re
+reIsInt = re.compile('^\d+$')
+
+
 def sort_values(*args):
     intList = []
     strList = []
     for i in args:
         if(type(i) == int):
             intList.append(i)
+        elif reIsInt.match(i):
+            intList.append(int(i))
         else:
             strList.append(i)
     intList.sort()
@@ -32,6 +38,7 @@ def sum_map(map):
     f.close()
     return sum
 
+
 def key_contains(map):
 
     sum = 0
@@ -39,6 +46,6 @@ def key_contains(map):
     for key, value in map.items():
         if key.find('st') > -1:
             sum += value
-            count+=1
+            count += 1
 
     return round(sum/count, 2)

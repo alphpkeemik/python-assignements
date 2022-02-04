@@ -10,7 +10,7 @@ class TestAssignment(unittest.TestCase):
     def test_sort_valuese(self):
         expected = '''2 8 54
 a v y'''
-        actual = sort_values(2, 'a', 54, 'v', 'y', 8)
+        actual = sort_values(2, 'a', '54', 'v', 'y', 8)
         self.assertEqual(expected, actual)
 
     def test_population(self):
