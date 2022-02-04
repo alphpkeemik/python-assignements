@@ -1,9 +1,9 @@
 import unittest
 
-from components.Sort import sort_values
+from components.Assignment import sort_values
 
 
-class TestIndependent(unittest.TestCase):
+class TestAssignment(unittest.TestCase):
 
     def test_transform_age(self):
         expected = '''2 8 54
